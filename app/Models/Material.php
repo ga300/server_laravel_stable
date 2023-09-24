@@ -33,4 +33,9 @@ class Material extends Model
     {
         return $this->hasMany(PurchaseOrder::class);
     }
+
+    public function departments()
+    {
+        return $this->belongsToMany(Department::class, 'department_material', 'material_id', 'department_id');
+    }
 }

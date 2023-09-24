@@ -25,4 +25,14 @@ class MaterialMovement extends Model
     {
         return $this->belongsTo(Material::class);
     }
+
+    public function operator()
+    {
+        return $this->belongsTo(Operator::class);
+    }
+
+    public function workstation()
+    {
+        return $this->belongsTo(Workstation::class);
+    }
 }
