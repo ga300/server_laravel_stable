@@ -12,4 +12,9 @@ class Workstation extends Model
         'descrizione',
         // Altri campi per la postazione
     ];
+
+    public function department()
+    {
+        return $this->belongsTo(Department::class);
+    }
 }
